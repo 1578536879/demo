@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta content="upgrade-insecure-requests" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
+    <link rel="manifest" href="manifest.json" />
+  </head>
+
+  <body style="max-width: 650px">
+    <noscript>
+      <strong
+        >We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work
+        properly without JavaScript enabled. Please enable it to
+        continue.</strong
+      >
+    </noscript>
+    <div id="app">
+      <img
+        src="https://wlmvp-cos.weiling.cn/worktable-erp/images/xiaowei_zhuli.png"
+      />
+      <div
+        id="app_loading"
+        style="
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 1000;
+        "
+      >
+        <img
+          width="50"
+          height="50"
+          src="https://wlmvp-cos.weiling.cn/worktable-h5/icon/loading.gif?hash=1"
+          alt=""
+        />
+      </div>
+    </div>
+    <script type="module">
+      window.addEventListener("beforeinstallprompt", (e) => {
+        console.log("beforeinstallprompt", e);
+        // e.preventDefault();
+        // e.prompt();
+      });
+      navigator.serviceWorker
+        .register("pwa1.js")
+        .then((res) => {
+          console.log("service-pwa1注册成功", res);
+        })
+        .catch((err) => {
+          console.log("service-pwa1注册失败", err);
+        });
+
+      navigator.serviceWorker.ready.then(swReg => {
+        console.log("ready")
+        Notification.requestPermission().then(() => {
+          swReg.showNotification("test", {
+            body: "测试内容内容11111",
+            icon: "qr-code-fill.png",
+            requireInteraction: true,
+            actions: [{
+              action: "1",
+              title: "傻狗"
+            }, {
+              action: "2",
+              title: "laoto"
+            }]
+          })
+        })
+      })
+    </script>
+  </body>
+</html>

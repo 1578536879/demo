@@ -1,0 +1,15 @@
+{
+  "short_name": "pwa1",
+  "name": "pwa-测试用例1",
+  "icons": [
+    {
+      "src": "qr-code-fill-144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/test1",
+  "display": "standalone",
+  "theme_color": "blue",
+  "background_color": "black"
+}
