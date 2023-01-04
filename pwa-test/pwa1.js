@@ -6,7 +6,7 @@ self.addEventListener("install", function (e) {
 //   e.waitUntil(
 //     caches.open(CACHA_NAME).then((cache) => {
 //       cache.addAll([
-//         "https://wlmvp-cos.weiling.cn/worktable-erp/images/xiaowei_zhuli.png",
+//         "worktable-erp/images/xiaowei_zhuli.png",
 //         "404Page.html",
 //       ]);
 //     })
@@ -21,7 +21,7 @@ self.addEventListener("activate", function (e) {
 self.addEventListener("fetch", (e) => {
   console.log(e);
   // 可以替换请求的内容
-  // return e.respondWith(fetch("https://wlmvp-cos.weiling.cn/worktable-erp/images/xiaowei_zhuli.png?v=22"))
+  // return e.respondWith(fetch("worktable-erp/images/xiaowei_zhuli.png?v=22"))
   // 404跳转页面
   // if(e.request.mode === "navigate"){
   //     return e.respondWith(fetch("404Page.html").then(res=>{
