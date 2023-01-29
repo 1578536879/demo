@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta content="upgrade-insecure-requests" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
+  </head>
+
+  <body style="max-width: 650px">
+    <noscript>
+      <strong
+        >We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work
+        properly without JavaScript enabled. Please enable it to
+        continue.</strong
+      >
+    </noscript>
+    <div id="app"></div>
+    <script src="./index.js"></script>
+    <script type="module">
+      const data = {
+        a: {
+          b: {
+            c: 2
+          },
+          d: 3
+        },
+        d: "d",
+        e: {
+          f: {
+            g: "g",
+            f: {
+              h: {
+                i: "i"
+              }
+            }
+          },
+          g: "g2"
+        }
+      }
+
+      const res = {
+        "a.b.c": 2,
+        "a.d": 3,
+        d: "d",
+        "e.f.g": "g",
+        "e.f.f.h.i": "i",
+        "e.g": "g2"
+      }
+      console.log(ObjectKeyToStr(data))
+    </script>
+    <!-- <script>
+      const obj = {
+        a: {
+          b: {
+            c: {
+              dd: "abcdd",
+            },
+          },
+          d: {
+            xx: "adxx",
+          },
+          e: "ae",
+        },
+      };
+
+      /*
+        1. 通过Object.keys获取属性数组
+      */
+      const getArray2String = (obj) => {
+        const returnObj = {};
+        (function recursion(paramObj, preKey) {
+          if(typeof paramObj === "string"){
+            returnObj[preKey] = paramObj;
+            return 
+          }
+          Object.keys(paramObj).forEach((res) => {
+            const keyName = preKey ? `${preKey}.${res}` : res;
+              recursion(paramObj[res], keyName);
+          });
+        })(obj);
+        return returnObj;
+      };
+
+      console.log(getArray2String(obj));
+
+      // 要求转换成如下对象
+      var output = {
+        "a.b.c.dd": "abcdd",
+        "a.d.xx": "adxx",
+        "a.e": "ae",
+      };
+    </script> -->
+  </body>
+</html>

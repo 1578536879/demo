@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta content="upgrade-insecure-requests" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
+  </head>
+
+  <body style="max-width: 650px">
+    <noscript>
+      <strong
+        >We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work
+        properly without JavaScript enabled. Please enable it to
+        continue.</strong
+      >
+    </noscript>
+    <div id="app"></div>
+    <script src="./index.js"></script>
+    <script type="module">
+      const list = [
+        { id: "01", parentId: 0, name: "节点1" },
+        { id: "011", parentId: "01", name: "节点1-1" },
+        { id: "02", parentId: 0, name: "节点2" },
+        { id: "0111", parentId: "011", name: "节点1-1-1" },
+        { id: "022", parentId: "02", name: "节点2-2" },
+        { id: "0222", parentId: "022", name: "节点2-2-2" },
+        { id: "03", parentId: 0, name: "节点3" },
+        { id: "023", parentId: "02", name: "节点2-3" },
+      ];
+      console.log(con(list))
+    </script>
+  </body>
+</html>
