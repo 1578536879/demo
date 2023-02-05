@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="1"
+            tests="1">
+
+  <testsuite name="nightwatch.spec"
+    errors="0" failures="1" hostname="" id="" package="nightwatch.spec" skipped="0"
+    tests="1" time="2.543" timestamp="">
+  
+    <testcase name="test1" classname="nightwatch.spec" time="2.543" assertions="1">  <failure message="Timed out while waiting for element &lt;.button&gt; to be present for 2000 milliseconds. - expected &#34;visible&#34; but got: &#34;not found&#34; (2072ms)">    at Object.test1 (E:\weiling-mobile-ui\test\e2e\nightwatch.spec.js:3:57)</failure>
+
+    
+    </testcase>
+  
+
+  
+
+    
+
+  
+  </testsuite>
+</testsuites>

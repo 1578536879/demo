@@ -1,0 +1,1 @@
+export const httpTest1 = jest.fn(() => Promise.resolve([{id: 1}]))

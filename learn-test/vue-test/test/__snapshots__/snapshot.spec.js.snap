@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`spanshot-test snapshot-test1 1`] = `
+<div>
+  <router-link
+    to="/test"
+  >
+    测试路由文案
+  </router-link>
+  <router-link
+    to="/test"
+  >
+    测试路由文案
+  </router-link>
+  <router-link
+    to="/test"
+  >
+    测试路由文案
+  </router-link>
+  <router-link
+    to="/test"
+  >
+    测试路由文案
+  </router-link>
+</div>
+`;

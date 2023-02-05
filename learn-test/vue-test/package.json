@@ -1,0 +1,61 @@
+{
+  "name": "weiling-mobile-ui-vue3",
+  "version": "0.0.71",
+  "module": "lib/weiling-mobile-ui.es.js",
+  "main": "lib/weiling-mobile-ui.umd.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "pub": "npm version patch -m 'new-version' && npm run build && npm publish",
+    "test": "jest --no-cache",
+    "test:e2e": "nightwatch --config nightwatch.config.js --env chrome",
+    "test:debugger": "node --inspect-brk ./node_modules/jest/bin/jest.js --no-cache --runInBand"
+  },
+  "dependencies": {
+    "@vue/babel-helper-vue-jsx-merge-props": "^1.4.0",
+    "@vue/babel-preset-jsx": "^1.4.0",
+    "@vue/test-utils": "^2.2.7",
+    "chromedriver": "^109.0.0",
+    "dayjs": "^1.11.7",
+    "moment": "^2.29.4",
+    "nightwatch": "^2.6.13",
+    "qs": "^6.11.0",
+    "selenium-server": "^3.141.59",
+    "ts-jest": "^26.5.6",
+    "vant": "^3.6.11",
+    "vue": "^3.2.45",
+    "vue-router": "^4.1.6",
+    "vue3-jest": "27.0.0-alpha.1",
+    "vuedraggable": "^4.1.0",
+    "vuex": "^4.1.0",
+    "xgplayer": "^2.32.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.12",
+    "@babel/preset-env": "^7.20.2",
+    "@testing-library/vue": "6.6.1",
+    "@vitejs/plugin-vue": "^2.3.4",
+    "@vue/babel-preset-app": "^5.0.8",
+    "@vue/compiler-sfc": "^3.2.45",
+    "babel-jest": "^26.3.0",
+    "flush-promises": "^1.0.2",
+    "jest": "^26.6.3",
+    "sass": "^1.57.1",
+    "typescript": "^4.9.4",
+    "unplugin-vue-components": "^0.21.2",
+    "vite": "^2.9.15",
+    "vite-plugin-dts": "^1.7.1",
+    "vue": "^3.2.25",
+    "vue-jest": "5.0.0-alpha.10",
+    "vue-loader": "^17.0.1"
+  },
+  "peerDependenciesMeta": {
+    "vue": {
+      "optional": true
+    },
+    "@vue/composition-api": {
+      "optional": true
+    }
+  }
+}
