@@ -47,35 +47,6 @@ const emit = defineEmits<{
   (e: "onClick");
 }>();
 
-const btnClass = computed(() => {
-  return {
-    [`btn-plain-${props.type}`]: props.plain,
-    [`btn-type-${props.type}`]: !props.plain,
-    [`btn-shape-${props.shape}`]: true,
-    [`btn-size-${props.size}`]: true,
-    disabled: props.disabled,
-  };
-});
-
-const btnStyle = computed(() => {
-  let colorStyle = {};
-  if (props.plain && props.color) {
-    colorStyle = {
-      "border-color": props.color,
-      color: props.color,
-    };
-  } else if (!props.plain && props.color) {
-    colorStyle = {
-      "background-color": props.color,
-      "border-color": props.color,
-    };
-  }
-  return {
-    ...props.styleExtra,
-    ...colorStyle,
-  };
-});
-
 const onButtonClick = () => {
   (root.$attrs as any).onClick();
   if (props.disabled) return;
