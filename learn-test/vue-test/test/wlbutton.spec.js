@@ -1,14 +1,14 @@
-import WlButton from "@packages/components/WlButton/src/index.vue";
+import Button from "@packages/components/Button/src/index.vue";
 import { mount, shallowMount, RouterLinkStub } from "@vue/test-utils";
 import { httpTest1 } from "./mock";
 import { flushPromises } from "@vue/test-utils";
 
 jest.mock("./mock.js");
 
-describe("test-WlButton.vue", () => {
+describe("test-Button.vue", () => {
   // test("test1", () => {
   //   // 渲染组件
-  //   const wrapper = shallowMount(WlButton, {
+  //   const wrapper = shallowMount(Button, {
   //     // 传递给组件的props参数
   //     propsData: {
   //       text: "测试1",
@@ -45,7 +45,7 @@ describe("test-WlButton.vue", () => {
   //     },
   //     end: jest.fn(),
   //   };
-  //   const wrapper = shallowMount(WlButton, {
+  //   const wrapper = shallowMount(Button, {
   //     mocks: { $aaa },
   //   });
   //   // expect.assertions(1)
@@ -63,7 +63,7 @@ describe("test-WlButton.vue", () => {
 
   // test("event", () => {
   //   const onClick = jest.fn();
-  //   const wrapper = shallowMount(WlButton, {
+  //   const wrapper = shallowMount(Button, {
   //     propsData: {
   //       onClick,
   //     },
@@ -84,7 +84,7 @@ describe("test-WlButton.vue", () => {
   
   // test("subs", () => {
   //   console.log(RouterLinkStub)
-  //   const bnt = shallowMount(WlButton, {
+  //   const bnt = shallowMount(Button, {
   //     stubs: {
   //       RouterLink: RouterLinkStub
   //     }
@@ -93,7 +93,7 @@ describe("test-WlButton.vue", () => {
     
     
     test("mixin", () => {
-      const comp = mount(WlButton, {
+      const comp = mount(Button, {
         mixins: [MixinExp ]
       })
     })
